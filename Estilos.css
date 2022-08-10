@@ -13,6 +13,16 @@ h1.Margenes2{margin-top:10cm;margin-left:10cm;}
 img.Imagenes{width: 10cm;height: 10cm; display: inline-block;}
 #SeccionFotos{margin-top: 4cm;padding: 2cm;background-color: cadetblue; width: fit-content;}
 .Foto{width: 10cm;height: 10cm; display: inline-block;}
+#SeccionParrafos{margin-top: 4 cm;font-size: 16pt; padding: 2em; background-color: blue; width: fit-content; height: fit-content;}
+#SeccionParrafos p.InLineParrafos{display: inline-block;width:8cm ;vertical-align:middle;text-align: justify;}
+/* https://htmlcolorcodes.com/es/ */
+#Colores1{color:#5d0347; font-family: Verdana, Geneva, Tahoma, sans-serif; }
+#Colores2{color:#00f}
+#Colores3{color:rgb(0%, 0%, 100%)}
+#Colores4{color:rgb(0, 0, 255)}
+#Colores5{color:blue}
+
+#PruebaFuentes{font-variant:small-caps;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-style: italic;font-weight:500;font-size: 2pc;}
 
 /* Unidades de medida pt = 1/72 pulgadas = 1/72 * 2,54 cm = 0,0352778 
 pc = 12 pt 
