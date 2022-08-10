@@ -2,3 +2,18 @@ h1.LetraRoja{color:red; font-size: 200px; font-weight: bold;}
 h1.LetraFucsia{color:fuchsia}
 h1.LetraItalica{font-style: italic;}
 h1.LetraMarron.LetraOblicua{color:maroon; font-style: oblique;}
+p.sinpadd{font-size: 72pt; background-color: aqua;}
+p.conpadd1em{font-size: 6pc; background-color: aqua;padding: 1em;margin-right: 20cm;}
+p.conpadd2em{font-size: 1in; background-color:blueviolet;padding: 2em;margin-left: 20cm;}
+p.conpadd72pt{font-size: 1in; background-color:chartreuse;padding: 72pt;}
+p.conpadd144pt{font-size: 1in; background-color:chocolate;padding: 144pt;}
+p.width.height{width: fit-content;height:fit-content;background-color: red;font-size: 16pt;display: inline-block};
+h1.Margenes1{display:inline-block;margin: auto;text-align: left;width:fit-content;}
+h1.Margenes2{margin-top:10cm;margin-left:10cm;}
+img.Imagenes{width: 10cm;height: 10cm; display: inline-block;}
+#SeccionFotos{margin-top: 4cm;padding: 2cm;background-color: cadetblue; width: fit-content;}
+.Foto{width: 10cm;height: 10cm; display: inline-block;}
+
+/* Unidades de medida pt = 1/72 pulgadas = 1/72 * 2,54 cm = 0,0352778 
+pc = 12 pt 
+in = 1 pulgada = 72 pt = 6 pc*/
