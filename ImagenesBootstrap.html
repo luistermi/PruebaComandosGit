@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imágenes Bootstrap</title>
+    <link rel="stylesheet" href="./dist/bootstrap/css/bootstrap.css">
+</head>
+<body>
+    <!-- img-fluid adapta el ancho al ancho del padre
+    img-thumbnail da borde a la imagen de 1 px
+    rounded redondea los bordes de la imagen
+    rounded-circle redondea a la imagen
+    float-start sitúa a la imagen al comienzo de la fila
+    float-end sitúa a la imagen al final de la fila -->
+    <div class="container-fluid">
+            <!-- <img src="./images/20200831_141416.jpg" alt="pichus" width="400px" class="float-start" height="400px"> -->
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-3"></div>
+                <div class="col-3"></div>
+                <div class="col-3 order-12"><img src="./images/maradona-imagen.jpg" alt="diegote" class="img-fluid"></div>
+            </div>
+            <div class="row" style="margin-top:5cm">
+                <div class="col-6 order-2"><img src="./images/20200831_141416.jpg" alt="pichus" class="img-fluid"></div>
+                <div class="col-6"></div>
+            </div>
+        <!-- <div class="row">
+            <div class="col-4"><img src="./images/20200831_141416.jpg" alt="pichus" class="img-fluid"></div>
+            <div class="col-4"><img src="./images/maradona-imagen.jpg" alt="diegote" class="img-fluid"></div>
+            <div class="col-2"><img src="./images/20200831_141416.jpg" alt="pichus" class="img-fluid"></div>
+            <div class="col-2"><img src="./images/maradona-imagen.jpg" alt="diegote" class="img-fluid"></div>
+            <div class="col-4"></div>
+            <div class="col-4"></div>
+        </div> -->
+    </div>
+    <div style="margin-top: 1cm;">
+        <p>Prueba</p>
+    </div>
+    <div style="margin-top: 10cm;">
+        <p>Prueba 2</p>
+    </div>
+    <script src="./dist/bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+</html>
