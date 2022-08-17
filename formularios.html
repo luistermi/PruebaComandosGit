@@ -10,18 +10,34 @@
 
 </head>
 <body>
-    <form>
+    <form style="background-color: yellow;">
         <div class="row">
             <div class="col-4 offset-1">
                 <div class="mb-3">
+                    <label for="SelectPrueba" class="form-label">Seleccione una opción</label>
+                    <select name="SelectPrueba" id="SelectPrueba" class="form-select">
+                    <option selected>Soy de la B</option>
+                    <option value="River">River</option>
+                    <option value="Boca">Boca</option>
+                    <option value="Independiente">Independiente</option>
+                    <option value="Racing">Racing</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Enviar Datos</button>
+                    <button type="reset" class="btn btn-danger">Resetear Info</button>
+                </div>
+            </div>
+            <div class="col-4 offset-1">
+                <div class="mb-3">
                     <label for="NombreyApellido" class="form-label">Nombre(s) y Apellido(s)</label>
-                    <input type="text" id="NombreyApellido" class="form-control">
-                    <div id="NombreyApellido" class="form-text">Debe ingresar su(s) nombre(s) y apellido(s)</div>
+                    <input type="text" id="NombreyApellido" class="form-control" value="Luis Terminiello">
+                    <div class="form-text">Debe ingresar su(s) nombre(s) y apellido(s)</div>
                 </div>
                 <div class="mb-3">
                     <label for="Email" class="form-label">Email</label>
                     <input type="email" class="form-control" id="Email" placeholder="p.ej. pepepepin@gmail.com">
-                    <div class="form-text" id="Email">Debe ingresar un email válido</div>
+                    <div class="form-text">Debe ingresar un email válido</div>
                 </div>
                 <div class="mb-3">
                     <label for="Nacionalidad" class="form-label">Nacionalidad</label>
@@ -29,8 +45,34 @@
                     <datalist id="Nacionalidades">
                         <option value="Argentina">
                         <option value="Italia">
-                        <option value="Brasil"></option>
+                        <option value="Brasil">
                     </datalist>
+                </div>
+                <div class="mb-3">
+                    <div class="form-check">
+                        <label for="EconomiaCheck" class="form-check-label">Economía</label>
+                        <input type="checkbox" id="EconomiaCheck" class="form-check-input" checked>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="EntradaLibreTexto" class="form-label">Ingrese lo que quiera decir</label>
+                    <textarea name="EntradaLibreTexto" id="EntradaLibreTexto" cols="30" rows="10" class="form-control" placeholder="Inspírese"></textarea>
+                    <div class="form-text" id="EntradaLibreTexto">Expláyese</div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-check">
+                        <label for="EconomiaCheck" class="form-check-label">Hacienda</label>
+                        <input type="radio" id="EconomiaCheck" class="form-check-input" name="LugarTrabajo">
+                    </div>
+                    <div class="form-check">
+                        <label for="EnergiaCheck" class="form-check-label">Energía</label>
+                        <input type="radio" id="EnergiaCheck" class="form-check-input" name="LugarTrabajo">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-check">
+                        <label for="EducacionCheck" class="form-check-label">Educación</label>
+                        <input type="radio" id="EducacionCheck" class="form-check-input" name="LugarTrabajo2">
                 </div>
             </div>
         </div>
