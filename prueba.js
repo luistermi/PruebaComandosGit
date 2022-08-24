@@ -3,4 +3,4 @@ function pepe() {
   return a + b;
 }
 
-pepe()
+pepe();
