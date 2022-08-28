@@ -8,19 +8,92 @@
 </head>
 <body>
     <script language="javascript" type="text/javascript">
-        document.write("Hola Mundo!");
-        //
-        let a = 2n;
-        console.log(typeof(a));
+        // document.write("Hola Mundo!");
+        // //
+        // let a = 2n;
+        // console.log(typeof(a));
         
-        let c = new Date();
-        console.log(c instanceof Array);
+        // let c = new Date();
+        // console.log(c instanceof Array);
 
-        let d = function(){
-            return "Hola Pepe";
+        // let d = function(){
+        //     return "Hola Pepe";
+        // }
+
+        // console.log(typeof d);
+        let a = "Chau";
+
+        switch(a){
+            // console.log("Estoy adentro del switch");
+            case "Chau":
+                console.log("a es igual a Chau");
+                break;
+            case "Hola":
+                console.log("a es igual a Hola");
+                break;
+            default:
+                console.log("a no es igual a Hola ni Chau");
+                break;
+        }
+        console.log("Estoy afuera del switch");
+
+        function sumar(a,b,c){
+            return a+b+c;
         }
 
-        console.log(typeof d);
+        const multiplicar = (a,b,c) => {
+            return a*b*c;
+        }
+
+        console.log(sumar(10,23,44));
+        console.log(multiplicar(2,2,2));
+
+        const potencia = (numero,potencia) => {
+            let resultado = 1;
+            if(potencia > 0) {
+                for(let i = 1;i<=potencia;i++) {
+                resultado *= numero;
+            }
+            }
+            return resultado;
+        }
+
+        console.log(potencia(3,4));
+
+        const potenciaBis = (numero,potencia) => {
+            let resultado = 1;
+            let contador = 1;
+            
+            while(potencia != 0 && contador<=potencia) {
+                resultado *= numero;
+                contador++;
+            }
+            return resultado;
+            }
+        
+
+        console.log(potenciaBis(3,4));
+
+        const potenciaBis2 = (numero,potencia) => {
+            let resultado = 1;
+            let contador = 1;
+            
+            if(potencia > 0) {
+                do {
+                resultado *= numero;
+                contador++;
+                console.log("Fin de la sentencia");
+                continue;
+                
+                } while(contador<=potencia);
+
+            }
+            
+            return resultado;
+        
+        }
+        console.log(potenciaBis2(3,4));
+
       </script>
 </body>
 </html>
