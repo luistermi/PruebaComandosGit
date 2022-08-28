@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <script language="javascript" type="text/javascript">
+        let b = ["Hola","Chau","Coca Cola","Coco","Pepín","Pepe"];
+
+        let c = b.filter(element => element.length > 4);
+        let d = b.find(element => element.length > 4);
+        let e = b.includes("Coca Cola");
+        let f = b.indexOf("Chauc");
+
+        console.log(b);
+        console.log(c);
+        console.log(d);
+        console.log(e);
+        console.log(f);
+
+        h = [0,2,2323,2314,111,4545,-12,9328,233,111,433,-322,23];
+        console.log(Math.max(...h));
+        console.log(Math.min(...h));
+        console.log(Math.max.apply(null,h));
+        console.log(Math.min.apply(null,h));
+
+        const equipos = ['Real Madrid', 'Manchester Utd', 'Bayern Munich', 'Juventus'];
+        equipos.sort();
+        console.log(equipos);
+
+        const numeros = [3, 23, 12];
+        numeros.sort();
+        console.log(numeros);
+
+        const numbers = [4, 2, 5, 1, 3];
+        numbers.sort((a,b)=>{
+            return a-b;
+        })
+        console.log(numbers);
+
+        const equiposArg = ["River", "Boca", "Independiente", "Racing", "San Lorenzo", "Huracán"];
+
+        const busquedaSecuencial = (elemento, array) => {
+            for (let i in array) {
+                if (array[i] == elemento) {return i};
+            }
+            return -1;
+        }
+        console.log(busquedaSecuencial("Quilmes",equiposArg));
+
+        const busquedaSecuencialBis = (elemento, array) => {
+            for (let equipo of array) {
+                if (equipo == elemento) {return array.indexOf(equipo)};
+            }
+            return -1;
+        }
+
+        console.log(busquedaSecuencialBis("Quilmes",equiposArg));
+
+        // diferencia entre of array e in array
+
+    </script>
+</body>
+</html>
