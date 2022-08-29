@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <header class="encabezado" id="encabezado">
+        <h1 class="encabezado" id="titulo">
+            Hola a todo el mundo
+        </h1>
+        <p class="encabezado" id="texto-libre">
+            Acá estamos para probar el DOM
+        </p>
+    </header>
+    <main class="principal" id="principal">
+        <section class="primera-seccion" id="primera-seccion">
+            <h3 class="primera-seccion" id="titulin">Hola especialmente a los argentinos</h3>
+            <p class="primera-seccion" id="parrafoCentral">Porque para un argentino no hay nada mejor que otro argentino</p>
+            <p class="primera-seccion" id="segundoParrafo">Como bien dijo el General</p>
+        </section>
+    </main>
+    <script language="javascript" type="text/javascript">
+        // const claseEncabezado = document.getElementsByClassName("encabezado");
+        // console.log(claseEncabezado);
+        const idTextoLibre = document.getElementById("texto-libre");
+        console.log(idTextoLibre);
+        const tagP = document.getElementsByTagName("p");
+        console.log(tagP);
+        const tagH1 = document.getElementsByTagName("h1");
+        console.log(tagH1);
+        const pPrimeraSeccion = document.querySelectorAll("p.primera-seccion");
+        console.log(pPrimeraSeccion);
+        const titulo = document.getElementById("titulo");
+
+        idTextoLibre.innerHTML = "Acá estamos modificando por JS";
+        // El inner html parece funcionar solamente por id
+
+        titulo.innerHTML = "Cambiando el título por JS";
+        titulo.id = "titular";
+        titulo.style.fontSize = "200px";
+        titulo.setAttribute("name","pepito");
+        const link = document.createElement("a");
+        titulo.appendChild(link);
+        titulo.removeChild(link);
+
+        const encabezado = document.getElementById("encabezado");
+        const nuevoH2 = document.createElement("h2");
+        encabezado.replaceChild(nuevoH2,titulo);
+
+
+    </script>
+</body>
+</html>
