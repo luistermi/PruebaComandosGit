@@ -13,8 +13,22 @@
         let JSON2 = new Object();
         console.log(JSON2);
         let JSON3 = {"Nombre":"Luis","Apellido":"Terminiello","edad":39,"documento":{"tipo":"DNI","número":"30.269.340"} ,"profesión":"Economista","materias":[{"Materia":"Economía Internacional","Nota":9},{"Materia":"Finanzas Públicas","Nota":8}]};
+        let JSON3Cambiado = JSON.stringify(JSON3);
         console.log(JSON3);
+        console.log(JSON3Cambiado);
+        let JSON3AObjeto = JSON.parse(JSON3Cambiado);
+        console.log(JSON3AObjeto);
         // https://jsongrid.com/json-grid - Validación de formato JSON
+        const datosPersonales = {
+            nombre:"Luis",
+            apellido:"Terminiello",
+            edad:39
+        }
+        console.log(datosPersonales);
+        console.log(JSON.stringify(datosPersonales));
+        // JSON.stringify(objeto) convierte objeto a formato json con doblecomillado
+        // JSON.parse(json) convierte a objeto un json
+
     </script>
 </body>
 </html>
