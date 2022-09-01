@@ -6,7 +6,7 @@ function DecoradorPersona(target:Function): void{
 class Persona {
     readonly nombre: string;
     readonly apellido: string;
-    private anioNacimiento: number;
+    protected anioNacimiento: number;
 
     constructor(nombre: string, apellido: string, añoNacimiento: number) {
         this.nombre = nombre;
@@ -46,3 +46,77 @@ class Persona {
         return this.nombre + ' ' + this.apellido;
     }
     }
+
+    class Personita extends Persona {
+        private alturaCm: number;
+        constructor(nombre: string, apellido: string, anioNacimiento: number, alturaCm: number) {
+            super(nombre, apellido, anioNacimiento);
+            this.alturaCm = alturaCm;
+        }
+        
+        get AlturaCm(): number {
+            return this.alturaCm;
+        }
+
+        set AlturaCm(alturaCm:number) {
+            this.alturaCm = alturaCm;
+        }
+    }
+
+    let Luichi: Persona = new Persona("Luichi", "Terminiello", 1983);
+    let Mari: Personita = new Personita("Mari", "Ferrerira", 1992, 162);
+
+    interface Operar {
+        Operar(numero1: number, numero2: number): number;
+    }
+
+    class Suma implements Operar {
+         Operar(numero1: number, numero2: number): number {
+            return numero1 + numero2;
+        }
+    }
+
+    class Resta implements Operar {
+        Operar(numero1: number, numero2: number): number {
+            return numero1 - numero2;
+        }
+    }
+
+    let suma = new Suma();
+    let resta = new Resta();
+    suma.Operar(12,15);
+    resta.Operar(14,16);
+
+    class Multiplicar {
+        static Operar(numero1: number, numero2: number): number {
+            return numero1 * numero2;
+        }
+    }
+
+    Multiplicar.Operar(13,14);
+
+    interface Person {
+        nombre: string;
+        edad: number;
+        direccion: {
+            calle: number;
+            altura: number;
+            ciudad: string;
+        }
+        comer: ()=> number
+    }
+
+    let lucho: Person = {
+        nombre: "Lucho",
+        edad: 39,
+        direccion: {
+            calle: 15,
+            altura:4382,
+            ciudad: "Berazategui"
+        },
+        comer():number {
+            return 12;
+        }
+    }
+
+    JSON.parse(JSON.stringify(lucho));
